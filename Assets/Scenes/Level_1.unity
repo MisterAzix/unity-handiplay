@@ -270,9 +270,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 634134005}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8a694ce5588a8b43818f67d737ad3ba, type: 3}
+  m_Script: {fileID: 11500000, guid: 4bd6a3e65ed85fd4292949a8a6cf57f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rb2D: {fileID: 634134007}
+  m_renderer: {fileID: 634134009}
+  m_frontSprite: {fileID: 21300000, guid: c9d5378a650eadf44844e52393fe3ba3, type: 3}
+  m_leftSprite: {fileID: 21300000, guid: d79ffb0e7ebf8314bb48d81b96cbd2a3, type: 3}
+  m_rightSprite: {fileID: 21300000, guid: f5e79b0e5315ad9418b52fd34c40d5f2, type: 3}
+  m_backSprite: {fileID: 21300000, guid: 71d331c31b12499498ce156d15cfe23c, type: 3}
+  speed: 200
 --- !u!212 &634134009
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -332,7 +339,7 @@ Transform:
   m_GameObject: {fileID: 634134005}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
