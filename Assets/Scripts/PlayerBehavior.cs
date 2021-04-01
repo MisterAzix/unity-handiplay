@@ -11,6 +11,7 @@ public class PlayerBehavior : MonoBehaviour
     public Sprite m_leftSprite;
     public Sprite m_rightSprite;
     public Sprite m_backSprite;
+    public AudioClip m_wallhitSound;
 
     public float speed = 100f;
 
@@ -48,12 +49,12 @@ public class PlayerBehavior : MonoBehaviour
         rb2D.MovePosition(newPos);
     }
 
-    /*void OnCollisionEnter2D(Collision2D collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Coin")
+        if (collision.gameObject.tag == "Wall")
         {
-            score++;
-            Destroy(collision.gameObject);
+            AudioManager.instance.PlaySound(m_wallhitSound);
+            //Destroy(collision.gameObject);
         }
-    }*/
+    }
 }
