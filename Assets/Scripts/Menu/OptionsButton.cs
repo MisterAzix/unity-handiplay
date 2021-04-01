@@ -2,11 +2,11 @@
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
-public class QuitButton : EventTrigger
+public class OptionsButton : EventTrigger
 {
    public override void OnPointerClick(PointerEventData data)
     {
-        Debug.Log("Quit called.");
+          SceneManager.LoadScene("Options");
     }
     
 }
