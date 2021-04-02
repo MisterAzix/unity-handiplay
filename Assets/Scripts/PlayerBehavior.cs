@@ -11,7 +11,8 @@ public class PlayerBehavior : MonoBehaviour
     public Sprite m_leftSprite;
     public Sprite m_rightSprite;
     public Sprite m_backSprite;
-    public AudioClip m_wallhitSound;
+
+    public AudioClip[] m_wallhitSound;
 
     public float speed = 100f;
 
@@ -53,8 +54,7 @@ public class PlayerBehavior : MonoBehaviour
     {
         if (collision.gameObject.tag == "Wall")
         {
-            AudioManager.instance.PlaySound(m_wallhitSound);
-            //Destroy(collision.gameObject);
+            AudioManager.instance.PlaySound(m_wallhitSound[Random.Range(0, m_wallhitSound.Length)]);
         }
     }
 }
