@@ -35,11 +35,7 @@ public class ScriptSettings : MonoBehaviour
             UpdatePitchSpeed();
         }
 
-        // Retourner au menu
-        if (Input.GetKeyDown("b"))
-        {
-            SceneManager.LoadScene("Menu");
-        }
+
     }
 
     private void UpdatePitchSpeed()
