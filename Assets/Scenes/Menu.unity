@@ -397,7 +397,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 102900000, guid: 2cda990e2423bbf4892e6590ba056729, type: 3}
+      - m_Target: {fileID: 758480345}
         m_MethodName: 
         m_Mode: 1
         m_Arguments:
@@ -565,8 +565,8 @@ GameObject:
   - component: {fileID: 1175024429}
   - component: {fileID: 1175024431}
   - component: {fileID: 1175024430}
-  - component: {fileID: 1175024432}
   - component: {fileID: 1175024433}
+  - component: {fileID: 1175024432}
   m_Layer: 5
   m_Name: Options
   m_TagString: Untagged
@@ -690,7 +690,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 102900000, guid: 2cda990e2423bbf4892e6590ba056729, type: 3}
+      - m_Target: {fileID: 1175024432}
         m_MethodName: 
         m_Mode: 1
         m_Arguments:
@@ -712,8 +712,8 @@ GameObject:
   - component: {fileID: 1430388148}
   - component: {fileID: 1430388151}
   - component: {fileID: 1430388150}
-  - component: {fileID: 1430388149}
   - component: {fileID: 1430388152}
+  - component: {fileID: 1430388149}
   m_Layer: 5
   m_Name: "Cr\xE9dits"
   m_TagString: Untagged
@@ -837,7 +837,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 102900000, guid: 2cda990e2423bbf4892e6590ba056729, type: 3}
+      - m_Target: {fileID: 1430388149}
         m_MethodName: 
         m_Mode: 1
         m_Arguments:
@@ -943,6 +943,7 @@ GameObject:
   - component: {fileID: 1881340543}
   - component: {fileID: 1881340542}
   - component: {fileID: 1881340544}
+  - component: {fileID: 1881340545}
   m_Layer: 5
   m_Name: Jouer
   m_TagString: Untagged
@@ -1053,7 +1054,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 102900000, guid: 2cda990e2423bbf4892e6590ba056729, type: 3}
+      - m_Target: {fileID: 1881340545}
         m_MethodName: 
         m_Mode: 1
         m_Arguments:
@@ -1064,3 +1065,16 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1881340545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1881340540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25a3816b34e26c0468c440e6e427560f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates: []
