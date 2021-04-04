@@ -12,6 +12,7 @@ public class PlayerBehavior : MonoBehaviour
     public Sprite m_leftSprite;
     public Sprite m_rightSprite;
     public Sprite m_backSprite;
+    public Animator animator;
 
     public AudioClip[] m_wallhitSound;
 
@@ -26,26 +27,51 @@ public class PlayerBehavior : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        float horizontalOffset = Input.GetAxis("Horizontal");
+        float verticalOffset = Input.GetAxis("Vertical");
+
         Vector2 newPos = rb2D.position;
-        if (Input.GetAxis("Horizontal") < 0f)
+
+        animator.SetFloat("Speed", verticalOffset);
+        animator.SetFloat("SpeedHorizontal", horizontalOffset);
+        animator.SetInteger("SpeedHorizontal 0", Mathf.RoundToInt(horizontalOffset));
+        animator.SetInteger("Speed 0", Mathf.RoundToInt(verticalOffset));
+
+        if (horizontalOffset < 0f)
         {
             newPos += Time.fixedDeltaTime * speed * Vector2.left;
             m_renderer.sprite = m_leftSprite;
+            animator.SetBool("isLeft", true);
+            animator.SetBool("isFront", false);
+            animator.SetBool("isBack", false);
+            animator.SetBool("isRight", false);
         }
-        if (Input.GetAxis("Horizontal") > 0f)
+        if (horizontalOffset > 0f)
         {
             newPos += Time.fixedDeltaTime * speed * Vector2.right;
             m_renderer.sprite = m_rightSprite;
+            animator.SetBool("isRight", true);
+            animator.SetBool("isFront", false);
+            animator.SetBool("isBack", false);
+            animator.SetBool("isLeft", false);
         }
-        if (Input.GetAxis("Vertical") > 0f)
+        if (verticalOffset > 0f)
         {
             newPos += Time.fixedDeltaTime * speed * Vector2.up;
             m_renderer.sprite = m_backSprite;
+            animator.SetBool("isBack", true);
+            animator.SetBool("isFront", false);
+            animator.SetBool("isRight", false);
+            animator.SetBool("isLeft", false);
         }
-        if (Input.GetAxis("Vertical") < 0f)
+        if (verticalOffset < 0f)
         {
             newPos += Time.fixedDeltaTime * speed * Vector2.down;
             m_renderer.sprite = m_frontSprite;
+            animator.SetBool("isFront", true);
+            animator.SetBool("isRight", false);
+            animator.SetBool("isBack", false);
+            animator.SetBool("isLeft", false);
         }
 
         rb2D.MovePosition(newPos);
