@@ -10,17 +10,28 @@ using UnityEngine.EventSystems;
 //     }
     
 // }
- bool IsActive = false;
 
 public class OptionsButton : MonoBehaviour
 {
-
-      void Update()
-      { 
-           if (Input.GetButton("Cancel"))
-            {    
-                  isActive = !isActive;
-                  GameObject.SetActive(isActive);
+      public GameObject pause;
+      public bool activeSelf;
+void Update()
+{
+      if (Input.GetButtonUp("Cancel"))
+      {    
+            pause.SetActive(!activeSelf);
+            activeSelf = !activeSelf;
+            Pause();
+      }  
+}
+public void Pause(){
+      if (Time.timeScale == 1f)
+            {
+            Time.timeScale = 0f;          
+            }else
+            {
+                  Time.timeScale = 1f;   
             }
-      }
+            Debug.Log(Time.timeScale);
+}
 }

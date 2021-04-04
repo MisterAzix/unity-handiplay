@@ -6,7 +6,7 @@ public class ReturnButton : EventTrigger
 {
    public override void OnPointerClick(PointerEventData data)
     {
-          SceneManager.LoadScene("Menu");
+    GameObject.FindWithTag("Pause").SetActive(false);
     }
     
 }
