@@ -9,21 +9,20 @@ public class OptionsButton : MonoBehaviour
 
 void Update()
 {
-      Debug.Log(activeSelf);
       if (Input.GetButtonUp("Cancel"))
       {   
-      activeSelf = !activeSelf;
+        activeSelf = !activeSelf;
       }  
-      Debug.Log(activeSelf);
+      //Debug.Log(activeSelf);
       if (activeSelf)
       {
-      pause.SetActive(true);
-     Time.timeScale = 0f; 
+        pause.SetActive(true);
+        Time.timeScale = 0f; 
       }
       if (activeSelf==false)
       {
-      pause.SetActive(false);
-      Time.timeScale = 1f; 
+        pause.SetActive(false);
+        Time.timeScale = 1f; 
       }
 }
 // public void Button(){
