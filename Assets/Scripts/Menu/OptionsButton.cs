@@ -9,7 +9,7 @@ public class OptionsButton : MonoBehaviour
 
 void Update()
 {
-      if (Input.GetButtonUp("Cancel"))
+      if (Input.GetButtonUp("Cancel") || Input.GetKey("b"))
       {   
         activeSelf = !activeSelf;
       }  
