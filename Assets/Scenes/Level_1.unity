@@ -1280,8 +1280,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1851901718080871217, guid: 3216f4603048cae45b1de2f8a42c7a1d,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1851901718080871217, guid: 3216f4603048cae45b1de2f8a42c7a1d,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1851901718080871217, guid: 3216f4603048cae45b1de2f8a42c7a1d,
+        type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5956
+      value: 5910.9
       objectReference: {fileID: 0}
     - target: {fileID: 1851901718080871217, guid: 3216f4603048cae45b1de2f8a42c7a1d,
         type: 3}
@@ -1347,7 +1357,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_triggerSound
       value: 
-      objectReference: {fileID: 8300000, guid: f1965e145a72a024f9c017f99d1be848, type: 3}
+      objectReference: {fileID: 8300000, guid: 0a53ae59d5ca2254d8fa6ac9710f44ac, type: 3}
     - target: {fileID: 9176701148632487592, guid: 3216f4603048cae45b1de2f8a42c7a1d,
         type: 3}
       propertyPath: m_nextCheckpoint
