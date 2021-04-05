@@ -14,7 +14,6 @@ public class PlayerBehavior : MonoBehaviour
     public Sprite m_backSprite;
     public Animator animator;
 
-    public AudioClip[] m_wallhitSound;
     public GameObject Steps;
 
     public float speed = 100f;
@@ -30,7 +29,7 @@ public class PlayerBehavior : MonoBehaviour
         animator.SetFloat("SpeedHorizontal", horizontalOffset);
         animator.SetInteger("SpeedHorizontal 0", Mathf.RoundToInt(horizontalOffset));
         animator.SetInteger("Speed 0", Mathf.RoundToInt(verticalOffset));
-if (horizontalOffset !=0 || verticalOffset != 0)
+if (horizontalOffset != 0 || verticalOffset != 0)
 {
     Steps.SetActive(true);
 }else
@@ -82,7 +81,7 @@ if (horizontalOffset !=0 || verticalOffset != 0)
     {
         if (collision.gameObject.tag == "Wall")
         {
-            AudioManager.instance.PlaySound(m_wallhitSound[Random.Range(0, m_wallhitSound.Length)]);
+            AudioManager.instance.PlayFX();
         }
     }
 }

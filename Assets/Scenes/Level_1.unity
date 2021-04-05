@@ -940,6 +940,7 @@ GameObject:
   - component: {fileID: 296794937}
   - component: {fileID: 296794938}
   - component: {fileID: 296794936}
+  - component: {fileID: 296794939}
   - component: {fileID: 296794935}
   m_Layer: 0
   m_Name: AudioManager
@@ -961,6 +962,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_soundStream: {fileID: 296794936}
+  m_FXStream: {fileID: 296794939}
 --- !u!82 &296794936
 AudioSource:
   m_ObjectHideFlags: 0
@@ -970,7 +972,8 @@ AudioSource:
   m_GameObject: {fileID: 296794934}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: f3e8399cfcd2fae40b40d15895387315,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -1087,6 +1090,103 @@ AudioSource:
   m_Volume: 0.1
   m_Pitch: 1
   Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &296794939
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 296794934}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 24300002, guid: f3e8399cfcd2fae40b40d15895387315,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: 0a87e043f9d99884fbecef4d03d92431, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.807
+  m_Pitch: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -4320,10 +4420,6 @@ MonoBehaviour:
   m_rightSprite: {fileID: 21300000, guid: f5e79b0e5315ad9418b52fd34c40d5f2, type: 3}
   m_backSprite: {fileID: 21300000, guid: 71d331c31b12499498ce156d15cfe23c, type: 3}
   animator: {fileID: 634134011}
-  m_wallhitSound:
-  - {fileID: 8300000, guid: 0a87e043f9d99884fbecef4d03d92431, type: 3}
-  - {fileID: 8300000, guid: a3f540cc4ba6dbc4b81c418b234b9363, type: 3}
-  - {fileID: 8300000, guid: 87f6fdff10e80c44aaf5b432b150e376, type: 3}
   Steps: {fileID: 2096873797}
   speed: 400
 --- !u!212 &634134009
@@ -42019,13 +42115,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1851901718080871217, guid: 3216f4603048cae45b1de2f8a42c7a1d,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1851901718080871217, guid: 3216f4603048cae45b1de2f8a42c7a1d,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1851901718080871217, guid: 3216f4603048cae45b1de2f8a42c7a1d,
+        type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1361
+      value: 1199
       objectReference: {fileID: 0}
     - target: {fileID: 1851901718080871217, guid: 3216f4603048cae45b1de2f8a42c7a1d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3577
+      value: 3508
       objectReference: {fileID: 0}
     - target: {fileID: 1851901718080871217, guid: 3216f4603048cae45b1de2f8a42c7a1d,
         type: 3}
