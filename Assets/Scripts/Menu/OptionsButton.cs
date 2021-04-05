@@ -18,12 +18,12 @@ void Update()
       if (activeSelf)
       {
       pause.SetActive(true);
-      Pause();
+     Time.timeScale = 0f; 
       }
       if (activeSelf==false)
       {
       pause.SetActive(false);
-      Pause();
+      Time.timeScale = 1f; 
       }
 }
 // public void Button(){
@@ -32,16 +32,16 @@ void Update()
 public void activeFalse(){
       activeSelf = false;
 }
-public void Pause(){
-      if (Time.timeScale == 1f)
-            {
-                  Time.timeScale = 0f;          
-            }
-            else if (Time.timeScale == 0f)
-            {
-                  Time.timeScale = 1f;   
-            }
-}
+// public void Pause(){
+//       if (Time.timeScale == 1f)
+//             {
+//                   Time.timeScale = 0f;          
+//             }
+//             else if (Time.timeScale == 0f)
+//             {
+//                   Time.timeScale = 1f;   
+//             }
+// }
 // public void Toggle(){
 //       if (activeSelf==false)
 //       {
