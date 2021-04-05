@@ -15,16 +15,10 @@ public class PlayerBehavior : MonoBehaviour
     public Animator animator;
 
     public AudioClip[] m_wallhitSound;
+    public GameObject Steps;
 
     public float speed = 100f;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
     void FixedUpdate()
     {
         float horizontalOffset = Input.GetAxis("Horizontal");
@@ -36,7 +30,13 @@ public class PlayerBehavior : MonoBehaviour
         animator.SetFloat("SpeedHorizontal", horizontalOffset);
         animator.SetInteger("SpeedHorizontal 0", Mathf.RoundToInt(horizontalOffset));
         animator.SetInteger("Speed 0", Mathf.RoundToInt(verticalOffset));
-
+if (horizontalOffset !=0 || verticalOffset != 0)
+{
+    Steps.SetActive(true);
+}else
+{
+    Steps.SetActive(false);
+}
         if (horizontalOffset < 0f)
         {
             newPos += Time.fixedDeltaTime * speed * Vector2.left;
@@ -45,6 +45,7 @@ public class PlayerBehavior : MonoBehaviour
             animator.SetBool("isFront", false);
             animator.SetBool("isBack", false);
             animator.SetBool("isRight", false);
+           
         }
         if (horizontalOffset > 0f)
         {
