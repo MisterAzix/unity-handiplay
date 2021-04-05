@@ -4,6 +4,9 @@ using UnityEngine.SceneManagement;
 
 public class ReturnButton : MonoBehaviour
 {
+    public void Load(){
+SceneManager.LoadScene("Menu");
+}
     void Update() {
         if (Input.GetKeyDown(KeyCode.B))
         {
