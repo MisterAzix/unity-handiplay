@@ -8,7 +8,7 @@ public class ReturnButton : MonoBehaviour
         SceneManager.LoadScene("Menu");
     }
    void Update() {
-     if (Input.GetKey("c"))
+     if (Input.GetKey("c") || Input.GetKey("b"))
      {
         Load();
      }
