@@ -2,11 +2,9 @@
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
-public class ReturnButton : EventTrigger
+public class ReturnButton : MonoBehaviour
 {
-   public override void OnPointerClick(PointerEventData data)
-    {
-    GameObject.FindWithTag("Pause").SetActive(false);
+     public void Load(){
+        SceneManager.LoadScene("Menu");
     }
-    
 }
