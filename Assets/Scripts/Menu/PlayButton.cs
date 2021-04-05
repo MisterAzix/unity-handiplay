@@ -14,7 +14,7 @@ public class PlayButton : MonoBehaviour {
 void Update() {
      if (Input.GetButtonUp("Fire1"))
      {
-         Load();
+        Load();
      }
  }
 }
