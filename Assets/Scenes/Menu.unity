@@ -2360,7 +2360,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a95d60f45ac4754a8ef43f21461d3ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Delegates: []
 --- !u!114 &1430388150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2446,11 +2445,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1430388149}
-        m_MethodName: 
+        m_MethodName: Load
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

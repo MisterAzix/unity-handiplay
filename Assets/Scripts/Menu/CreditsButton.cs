@@ -14,7 +14,7 @@ public class CreditsButton : MonoBehaviour
 void Update() {
      if (Input.GetKey("c"))
      {
-         Load();
+        Load();
      }
  }
 }

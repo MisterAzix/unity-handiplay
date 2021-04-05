@@ -7,4 +7,10 @@ public class ReturnButton : MonoBehaviour
      public void Load(){
         SceneManager.LoadScene("Menu");
     }
+   void Update() {
+     if (Input.GetKey("c"))
+     {
+        Load();
+     }
+ }
 }
