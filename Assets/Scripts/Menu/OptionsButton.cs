@@ -1,37 +1,52 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
-// using UnityEngine.SceneManagement;
 
-// public class OptionsButton : EventTrigger
-// {
-//    public override void OnPointerClick(PointerEventData data)
-//     {
-//           SceneManager.LoadScene("Options");
-//     }
-    
-// }
 
 public class OptionsButton : MonoBehaviour
 {
       public GameObject pause;
-      public bool activeSelf;
+     public bool activeSelf;
+
 void Update()
 {
+      Debug.Log(activeSelf);
       if (Input.GetButtonUp("Cancel"))
-      {    
-            pause.SetActive(!activeSelf);
-            activeSelf = !activeSelf;
-            Pause();
+      {   
+      activeSelf = !activeSelf;
       }  
+      Debug.Log(activeSelf);
+      if (activeSelf)
+      {
+      pause.SetActive(true);
+      Pause();
+      }
+      if (activeSelf==false)
+      {
+      pause.SetActive(false);
+      Pause();
+      }
+}
+// public void Button(){
+//       activeSelf = false; 
+// }
+public void activeFalse(){
+      activeSelf = false;
 }
 public void Pause(){
       if (Time.timeScale == 1f)
             {
-            Time.timeScale = 0f;          
-            }else
+                  Time.timeScale = 0f;          
+            }
+            else if (Time.timeScale == 0f)
             {
                   Time.timeScale = 1f;   
             }
-            Debug.Log(Time.timeScale);
 }
+// public void Toggle(){
+//       if (activeSelf==false)
+//       {
+//             activeSelf = true;
+//       }
+      // Pause();
+// }
 }

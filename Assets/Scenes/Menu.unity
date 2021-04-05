@@ -1112,7 +1112,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 773467549}
-  - component: {fileID: 773467548}
   m_Layer: 0
   m_Name: MainMenu
   m_TagString: Untagged
@@ -1120,20 +1119,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &773467548
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 773467547}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 796f33270fd7acc49a8f3bf111be7409, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pause: {fileID: 1658832671}
-  activeSelf: 0
 --- !u!4 &773467549
 Transform:
   m_ObjectHideFlags: 0
@@ -1712,7 +1697,6 @@ GameObject:
   - component: {fileID: 1175024431}
   - component: {fileID: 1175024430}
   - component: {fileID: 1175024433}
-  - component: {fileID: 1175024432}
   m_Layer: 5
   m_Name: Options
   m_TagString: Untagged
@@ -1780,20 +1764,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1175024428}
   m_CullTransparentMesh: 0
---- !u!114 &1175024432
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1175024428}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 796f33270fd7acc49a8f3bf111be7409, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pause: {fileID: 0}
-  activeSelf: 0
 --- !u!114 &1175024433
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1840,17 +1810,6 @@ MonoBehaviour:
       - m_Target: {fileID: 1658832671}
         m_MethodName: SetActive
         m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1175024432}
-        m_MethodName: Pause
-        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3139,7 +3098,6 @@ GameObject:
   - component: {fileID: 1894432802}
   - component: {fileID: 1894432801}
   - component: {fileID: 1894432800}
-  - component: {fileID: 1894432799}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -3167,20 +3125,6 @@ RectTransform:
   m_AnchoredPosition: {x: 20.881, y: 159}
   m_SizeDelta: {x: 69.02103, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1894432799
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1894432797}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 796f33270fd7acc49a8f3bf111be7409, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pause: {fileID: 0}
-  activeSelf: 0
 --- !u!114 &1894432800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3224,17 +3168,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1894432799}
-        m_MethodName: Pause
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1658832671}
         m_MethodName: SetActive
         m_Mode: 6
