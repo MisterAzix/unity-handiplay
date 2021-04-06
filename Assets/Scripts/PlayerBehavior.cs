@@ -29,13 +29,17 @@ public class PlayerBehavior : MonoBehaviour
         animator.SetFloat("SpeedHorizontal", horizontalOffset);
         animator.SetInteger("SpeedHorizontal 0", Mathf.RoundToInt(horizontalOffset));
         animator.SetInteger("Speed 0", Mathf.RoundToInt(verticalOffset));
-if (horizontalOffset != 0 || verticalOffset != 0)
-{
-    Steps.SetActive(true);
-}else
-{
-    Steps.SetActive(false);
-}
+
+        if (transform.hasChanged)
+        {
+            Steps.SetActive(true);
+            transform.hasChanged = false;
+        }
+        else
+        {
+            Steps.SetActive(false);
+        }
+
         if (horizontalOffset < 0f)
         {
             newPos += Time.fixedDeltaTime * speed * Vector2.left;
